@@ -2,8 +2,9 @@
 <%
     String regError = (String) request.getAttribute("regError");
     String regOk = (String) request.getAttribute("regOk");
+    String userLogin = (String) request.getAttribute("userLogin");
+    String userName = (String) request.getAttribute("userName");
 %>
-
 <form class="reg-user-form" method="post">
     <% if(regError != null){%>
     <span class="error"><%=regError%></span>
@@ -12,7 +13,7 @@
     <% } %>
     <div>
         <label for="user-login">Login</label>
-        <input type="text" id="user-login" name="userLogin"/>
+        <input type="text" id="user-login" name="userLogin" <%if(userLogin != null){%> value="<%=userLogin%>" <% } %>/>
     </div>
     <div>
         <label for="password">Password</label>
@@ -24,7 +25,7 @@
     </div>
     <div>
         <label for="name">Name</label>
-        <input type="text" id="name" name="userName"/>
+        <input type="text" id="name" name="userName" <%if(userName != null){%> value="<%=userName%>" <% } %>/>
     </div>
-    <input type="submit" value="Submit"/    >
+    <input type="submit" value="Submit"/>
 </form>

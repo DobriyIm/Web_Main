@@ -28,8 +28,14 @@ public class RegUserServlet extends HttpServlet {
         HttpSession session = req.getSession();
         String regError = (String) session.getAttribute("regError");
         String regOk = (String) session.getAttribute("regOk");
+        String userLogin = (String) session.getAttribute("userLogin");
+        String userName = (String) session.getAttribute("userName");
 
         if(regError != null){
+            if(userLogin != null)
+                req.setAttribute("userLogin", userLogin);
+            if(userName != null)
+                req.setAttribute("userName", userName);
             req.setAttribute("regError", regError);
             session.removeAttribute("regError");
         }
@@ -61,8 +67,11 @@ public class RegUserServlet extends HttpServlet {
             if(!userDAO.isLoginFree(userLogin)){
                 throw new Exception("This Login already in use!");
             }
-            if(userPassword == null || userPassword.isEmpty() || userPassword.length() < 3){
+            if(userPassword == null || userPassword.isEmpty()){
                 throw new Exception("User Password could not be empty!");
+            }
+            if(userPassword.length() < 3){
+                throw new Exception("Password length must be more then 3!");
             }
             if(!confirmPass.equals(userPassword)){
                 throw new Exception("Passwords do not match!");
@@ -83,6 +92,8 @@ public class RegUserServlet extends HttpServlet {
 
         }catch (Exception ex){
             session.setAttribute("regError", ex.getMessage());
+            session.setAttribute("userLogin", userLogin);
+            session.setAttribute("userName", userName);
             resp.sendRedirect(req.getRequestURI());
             return;
         }
