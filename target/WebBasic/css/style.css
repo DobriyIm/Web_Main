@@ -5,29 +5,36 @@ body {
     color: #272727;
     font-family: cursive;
 }
+
 h2 {
     font-family: monospace;
     color: #606060;
 }
+
 ul {
     list-style: none;
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
     font-family: 'Lora', serif;
     transition: .5s linear;
     color: #90A9B7;
 }
+
 i {
     margin-right: 10px;
 }
+
 nav {
     display: block;
     width: 660px;
     margin: 0 auto 30px;
 }
+
 input[type=text],[type=password] {
+    border-radius: 4px;
     width: 20%;
     padding: 12px 20px;
     margin: 5px 0;
@@ -37,12 +44,43 @@ input[type=text],[type=password] {
     color: #030303;
 }
 input[type=submit]{
+    border-radius: 4px;
     padding: 12px 20px;
     margin: 5px 0;
     box-sizing: border-box;
     border: none;
-    background-color: #90A9B7;
+    background-color: #D4AA7D;
     color: #030303;
+    transition-duration: 0.4s;
+}
+input[type=submit]:hover{
+    background: #EFD09E;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type=file]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+input[type=file] + label {
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: black;
+    background-color: #697d85;
+    display: inline-block;
+}
+input[type=file]:focus + label,
+input[type=file] + label:hover {
+    background-color: #90A9B7;
+}
+input[type=file]:focus + label{
+    
+}
+input[type=file] + label {
+    cursor: pointer; /* "hand" cursor */
 }
 
 .four ul {

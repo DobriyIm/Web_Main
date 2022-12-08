@@ -3,9 +3,10 @@
 
 <nav class="four">
     <ul>
-        <li><a href="<%=host%>/">Index.jsp</a></li>
-        <li><a href="<%=host%>/filter">Filter.jsp</a></li>
-        <li><a href="<%=host%>/hello">Hello.jsp</a></li>
-        <li><a href="<%=host%>/auth">Auth.jsp</a></li>
+        <li><a href="<%=host%>/">Index</a></li>
+        <li><a href="<%=host%>/filter">Filter</a></li>
+        <li><a href="<%=host%>/hello">Hello</a></li>
+        <li><a href="<%=host%>/auth">Auth</a></li>
+        <li><a href="<%=host%>/f-upload">File Upload</a></li>
     </ul>
 </nav>
