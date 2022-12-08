@@ -1,0 +1,63 @@
+body {
+    margin:0;
+    padding: 0px 10px 0px 10px;
+    background-color: #D2D8B3;
+    color: #272727;
+    font-family: cursive;
+}
+h2 {
+    font-family: monospace;
+    color: #606060;
+}
+ul {
+    list-style: none;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    transition: .5s linear;
+    color: #90A9B7;
+}
+i {
+    margin-right: 10px;
+}
+nav {
+    display: block;
+    width: 660px;
+    margin: 0 auto 30px;
+}
+input[type=text],[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #90A9B7;
+    color: #030303;
+}
+input[type=submit]{
+    padding: 12px 20px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #90A9B7;
+    color: #030303;
+}
+
+.four ul {
+    display: -webkit-flex;
+    display: flex;
+    background: #D4AA7D;
+    padding-left: 0;
+}
+.four a {
+    padding: 1em;
+    display: block;
+    color: #030303;
+    border-right: 1px solid #D2D8B3;
+    background: #D4AA7D;
+}
+.four a:hover {
+    background: #EFD09E;
+}
