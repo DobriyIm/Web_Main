@@ -77,7 +77,7 @@ input[type=file] + label:hover {
     background-color: #90A9B7;
 }
 input[type=file]:focus + label{
-    
+
 }
 input[type=file] + label {
     cursor: pointer; /* "hand" cursor */

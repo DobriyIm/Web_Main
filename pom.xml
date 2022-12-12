@@ -15,19 +15,11 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>3.0-alpha-1</version>
-      <scope>provided</scope>
-    </dependency>
-
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
-      <version>3.0.1</version>
+      <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
 
@@ -51,6 +43,14 @@
       <artifactId>guice-servlet</artifactId>
       <version>5.1.0</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.inject/javax.inject -->
+    <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+      <version>1</version>
+    </dependency>
+
 
 
 

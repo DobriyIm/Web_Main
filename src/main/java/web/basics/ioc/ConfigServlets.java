@@ -12,7 +12,7 @@ public class ConfigServlets extends ServletModule {
         filter("/*").through(AuthFilter.class);
 
 
-        serve("/f-upload").with(FileUploadServlet.class);
+        //serve("/f-upload").with(FileUploadServlet.class);
         serve("/register").with(RegUserServlet.class);
         serve("/filter").with(FilterServlet.class);
         serve("/hello").with(HelloServlet.class);
